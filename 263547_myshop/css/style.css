@@ -1,0 +1,338 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Style the body */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+/* Header/logo Title */
+
+.header {
+    padding: 25px;
+    text-align: center;
+    background: GhostWhite;
+    color: darkred;
+}
+
+/* Increase the font size of the heading */
+
+.header img {
+    width: 200px;
+    height: auto;
+    max-width: 200px;
+    border-radius: 50%;
+    float: left;
+    padding-bottom: 10px;
+}
+
+.header h1 {
+    position: center;
+    top: 18px;
+    left: 10px;
+    font-size: 60px;
+}
+
+.header p {
+    position: center;
+    top: 18px;
+    left: 10px;
+    font-size: 20px;
+    color: Indigo;
+    font-weight: bold;
+}
+
+/* Style the top navigation bar */
+
+.navbar {
+    top: 18px;
+    left: 10px;
+    overflow: hidden;
+    background-color: #f2f2f2;
+    width: 100%;
+    border-top-style: dotted;
+    border-bottom-style: dotted;
+    padding: 10px;
+}
+
+/* Style the navigation bar links */
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #330000;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Right-aligned link */
+
+.navbar a.right {
+    float: right;
+}
+
+/* Change color on hover */
+
+.navbar a:hover {
+    top: 18px;
+    left: 10px;
+    background-color: #ddd;
+    color: darkred;
+    text-align: center;
+}
+
+
+/* Footer */
+
+.footer {
+    overflow: hidden;
+    background-color: grey;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top-style: dotted;
+    border-bottom-style: dotted;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    color: #330000;
+    font-weight: bold;
+}
+
+h3 {
+    color: darkred;
+    text-align: center;
+    font-size: 200%;
+    font-weight: bold;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 80%;
+    height:80%;
+    margin: auto;
+    text-align: left;
+    font-family: calibri;
+    border: 3px solid black;
+    color: indigo;
+    padding-bottom: 5px;
+    background-color: #FFEFD5;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.price {
+    color: grey;
+    font-size: 22px;
+}
+
+.column {
+    float: left;
+    width: 420px;
+    padding-bottom: 40px;
+    margin-left: 40px;
+}
+
+/* Remove extra left and right margins, due to padding */
+
+.row {
+    margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive columns */
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 10%;
+    }
+    .row { 
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+
+.main {
+    -ms-flex: 100%;
+    flex: 100%;
+    padding: 30px;
+    background-color: #FFEFD5;
+}
+
+.main h2 {
+    text-align: center;
+    color: darkred;
+    font-size: 30px;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.float {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    bottom: 80px;
+    right: 30px;
+    background-color: rgba(102, 102, 207, 0.432);
+    color: black;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 3px #999;
+    border: 3px solid black;
+
+}
+
+.my-float {
+    margin-top: 18px;
+}
+
+
+.float .addproduct {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .float .addproduct::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+
+  .float:hover .addproduct {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  @media screen and (min-width: 1000px) {
+    .container {
+        width: 50%;
+        margin: auto;
+    }
+    .row {
+        grid-template-columns: repeat(4,1fr);
+        }
+
+    .main {
+        padding: 100px;
+    }
+
+input[type=text], input[type=number], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid black;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+input[type=submit] {
+    background-color: #f7a2a2;
+    color: darkred;
+    padding: 12px 20px;
+    border: 3px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+    float: right;
+    width: 100%;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+input[type=submit]:hover {
+    background-color: #f7a2a2;
+}
+
+.container {
+    border-radius: 20px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border: 3px solid black;
+}
+
+.col-25 {
+    float: left;
+    width: 30%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 70%;
+    margin-top: 6px;
+}
+
+.icon{
+    color: black;
+    min-width: 10%;
+    text-align: center;
+    margin-top: 6px;
+    padding: 12px 5px;
+}
+
+.input-icons i {
+    position: absolute;
+    right:10px;
+    top:3px;
+    cursor: pointer;
+}
+  
+.input-icons {
+    width: 100%;
+    margin-bottom: 10px;
+    position:relative;
+}
+
+.circular--portrait {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 80%;
+}
+
+.circular--portrait img {
+    width: 50%;
+    height: auto;
+ }
+}
+
+
+
